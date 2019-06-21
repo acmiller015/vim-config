@@ -22,8 +22,8 @@
     "Plug 'thedber/SimplyFold'                  " Better code folding
     "Plug 'vim-scripts/indentpython.vim         " Better python indentation
     Plug 'Valloric/YouCompleteMe'               " Auto-complete for Python
-    Plug 'nvie/vim-flake8'                      " PEP8 checking for Python
-    Plug 'xdegaye/pyclewn'                      " Python debugger
+    "Plug 'nvie/vim-flake8'                      " PEP8 checking for Python
+    "Plug 'xdegaye/pyclewn'                      " Python debugger
     Plug 'Shougo/deol.nvim'                     " Shell plugin for Vim. Continuation from vimshell.
     "Plug 'Shougo/vimshell'                      " Shell plugin for Vim
     "Plug 'vim-scripts/Conque-GDB'               " Terminal emulator for CLI programs such as GDB
@@ -87,13 +87,11 @@
         nnoremap <C-H> <C-W><C-H>
 
         " Display
-        set nu
+        set nu                  " line numbers
         noremap <lt> <C-W><lt>
         noremap > <C-W>>
         noremap - <C-W>-
         noremap + <C-W>+
-
-
 
 
     " Enable filetype specific settings.
@@ -123,6 +121,18 @@
     set shiftwidth=4
     set pastetoggle=<F12>
 
+    set listchars=eol:$,tab:\|\|,trail:-,extends:>,precedes:<,nbsp:⎵
+
+    " Python Specific (work around since python pulgin overrides setlocal in python.vim file)
+    "let g:python_recommended_style=0
+    "function! SetupPython()
+    "    " Here you can have the final say on what is set. So
+    "    " fixup any settings you don't like.
+    "    setlocal softtabstop=4
+    "    setlocal tabstop=4
+    "    setlocal shiftwidth=4
+    "endfunction
+    "command! -bar SetupPython call SetupPython()
 
 " ------------------
 " General Programming
