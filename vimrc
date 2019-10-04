@@ -121,7 +121,7 @@
     set shiftwidth=4
     set pastetoggle=<F12>
 
-    set listchars=eol:$,tab:\|\|,trail:-,extends:>,precedes:<,nbsp:⎵
+    set listchars=eol:¶,tab:→\ ,trail:•,extends:»,precedes:«,nbsp:⎵
 
     " Python Specific (work around since python pulgin overrides setlocal in python.vim file)
     "let g:python_recommended_style=0
